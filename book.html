@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Dr. Elena Vance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html">Dr. Elena Vance</a></div>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                    <li><a href="book.html" class="btn-primary">Book</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="booking-header">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+            <p style="max-width: 800px; margin: 20px auto 0; font-size: 1.1rem; opacity: 0.9;">Select a date and time that works for you. Initial consultations are 60 minutes.</p>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Step Indicator -->
+                <div class="booking-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Select Service</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Choose Date & Time</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Your Details</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Service Selection -->
+                <div class="booking-step-content" id="step1">
+                    <h3>Select Your Appointment Type</h3>
+                    <div class="service-options">
+                        <label class="service-option">
+                            <input type="radio" name="service" value="evaluation" data-duration="60">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Psychiatric Evaluation</h4>
+                                    <span class="duration"><i class="fas fa-clock"></i> 60 min</span>
+                                </div>
+                                <p>Comprehensive diagnostic assessment to understand your history, symptoms, and goals for treatment.</p>
+                            </div>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="medication" data-duration="30">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Medication Management</h4>
+                                    <span class="duration"><i class="fas fa-clock"></i> 30 min</span>
+                                </div>
+                                <p>Careful prescription monitoring to ensure effectiveness and minimize side effects.</p>
+                            </div>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="therapy" data-duration="50">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Psychotherapy</h4>
+                                    <span class="duration"><i class="fas fa-clock"></i> 50 min</span>
+                                </div>
+                                <p>Individual talk therapy utilizing CBT and mindfulness techniques to build coping strategies.</p>
+                            </div>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="telepsychiatry" data-duration="50">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Telepsychiatry</h4>
+                                    <span class="duration"><i class="fas fa-clock"></i> 50 min</span>
+                                </div>
+                                <p>Secure, HIPAA-compliant video appointment from the comfort of your home.</p>
+                            </div>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="couples" data-duration="60">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Couples Counseling</h4>
+                                    <span class="duration"><i class="fas fa-clock"></i> 60 min</span>
+                                </div>
+                                <p>Joint session to improve communication, resolve conflicts, and strengthen relationships.</p>
+                            </div>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="group" data-duration="90">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Group Therapy</h4>
+                                    <span class="duration"><i class="fas fa-clock"></i> 90 min</span>
+                                </div>
+                                <p>Supportive group sessions focused on shared experiences and collective healing.</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="booking-nav">
+                        <button class="btn-primary" id="toStep2" disabled>Continue <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Date & Time Selection -->
+                <div class="booking-step-content hidden" id="step2">
+                    <h3>Choose Your Preferred Date & Time</h3>
+                    <div class="datetime-grid">
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button class="calendar-nav" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                                <h4 id="currentMonth">January 2024</h4>
+                                <button class="calendar-nav" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <span>Sun</span>
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                            </div>
+                            <div class="calendar-days" id="calendarDays">
+                                <!-- Days will be generated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="timeslots-container">
+                            <h4 id="selectedDateLabel">Select a date</h4>
+                            <div class="timeslots" id="timeslots">
+                                <p class="no-date-selected">Please select a date from the calendar to view available times.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-nav">
+                        <button class="btn-secondary" id="backToStep1"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn-primary" id="toStep3" disabled>Continue <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Patient Details -->
+                <div class="booking-step-content hidden" id="step3">
+                    <h3>Enter Your Details</h3>
+                    <div class="booking-summary">
+                        <h4><i class="fas fa-calendar-check"></i> Appointment Summary</h4>
+                        <p><strong>Service:</strong> <span id="summaryService">-</span></p>
+                        <p><strong>Date:</strong> <span id="summaryDate">-</span></p>
+                        <p><strong>Time:</strong> <span id="summaryTime">-</span></p>
+                    </div>
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookFirstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="bookFirstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookLastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="bookLastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookEmail">Email <span class="required">*</span></label>
+                                <input type="email" id="bookEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookPhone">Phone <span class="required">*</span></label>
+                                <input type="tel" id="bookPhone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookReason">Reason for Visit</label>
+                            <textarea id="bookReason" name="reason" rows="3" placeholder="Briefly describe what you'd like to discuss..."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newPatient" id="newPatient">
+                                <span>I am a new patient</span>
+                            </label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" required>
+                                <span>I understand that this appointment is subject to confirmation and agree to the <a href="#">cancellation policy</a>.</span>
+                            </label>
+                        </div>
+                    </form>
+                    <div class="booking-nav">
+                        <button class="btn-secondary" id="backToStep2"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn-primary" id="confirmBooking"><i class="fas fa-check"></i> Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay hidden" id="confirmationModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Booking Confirmed!</h2>
+            <p>Your appointment has been successfully scheduled.</p>
+            <div class="modal-details">
+                <p><strong>Service:</strong> <span id="modalService">-</span></p>
+                <p><strong>Date:</strong> <span id="modalDate">-</span></p>
+                <p><strong>Time:</strong> <span id="modalTime">-</span></p>
+            </div>
+            <p class="modal-note">A confirmation email will be sent to your email address. Please arrive 10 minutes before your scheduled time.</p>
+            <button class="btn-primary" id="closeModal">Done</button>
+        </div>
+    </div>
+
+   <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Dr. Elena Vance, MD</h4>
+                    <p>123 Park Avenue,<br>London, UK</p>
+                    <p>Phone: 0800 XXX XXX</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Mon - Thu: 9am - 5pm<br>Fri: 9am - 2pm</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="book.html">Book Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <p>In case of a medical emergency, please dial 999 or visit your nearest emergency room.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340002653!2d-0.24168120642536509!3d51.52855824164916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="150" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Dr. Elena Vance, MD. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

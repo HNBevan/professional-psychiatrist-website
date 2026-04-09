@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dr. Elena Vance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html">Dr. Elena Vance</a></div>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                    <li><a href="book.html" class="btn-primary">Book</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p style="max-width: 800px; margin: 20px auto 0; font-size: 1.1rem; opacity: 0.9;">We're here to help. Reach out to schedule a consultation or ask any questions you may have.</p>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <h3>Send a Secure Message</h3>
+                    <p>Please use the form below for non-urgent inquiries. We will respond within one business day.</p>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(212) 555-0123">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry">Reason for Contact <span class="required">*</span></label>
+                            <select id="inquiry" name="inquiry" required>
+                                <option value="" disabled selected>Please select an option</option>
+                                <option value="new-patient">New Patient Inquiry</option>
+                                <option value="existing-patient">Existing Patient</option>
+                                <option value="appointment">Schedule Appointment</option>
+                                <option value="insurance">Insurance Question</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Contact Method</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="contactMethod" value="email" checked>
+                                    <span>Email</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contactMethod" value="phone">
+                                    <span>Phone</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Please describe how we can help you..." required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span>I understand this form is for non-emergency inquiries only and agree to the <a href="#">Privacy Policy</a>.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info-container">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Park Avenue<br>London, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>0800 XXX XXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Mon - Thu: 9am - 5pm<br>Fri: 9am - 2pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item emergency">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>Emergency</h4>
+                            <p>In case of a medical emergency, please dial 999 or go to the nearest emergency room.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Dr. Elena Vance, MD</h4>
+                    <p>123 Park Avenue,<br>London, UK</p>
+                    <p>Phone: 0800 XXX XXX</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Mon - Thu: 9am - 5pm<br>Fri: 9am - 2pm</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="book.html">Book Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <p>In case of a medical emergency, please dial 999 or visit your nearest emergency room.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340002653!2d-0.24168120642536509!3d51.52855824164916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="150" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Dr. Elena Vance, MD. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

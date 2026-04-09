@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Elena Vance | Psychiatrist & Psychotherapist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html">Dr. Elena Vance</a></div>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                    <li><a href="book.html" class="btn-primary">Book</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-split">
+            <div class="hero-text">
+                <h1>Compassionate Psychiatry for a Balanced Life</h1>
+                <p>Evidence based mental health care tailored to your unique journey. Providing a safe, confidential space for healing and growth.</p>
+                <a href="contact.html" class="btn-primary">Schedule an Appointment</a>
+            </div>
+            <div class="hero-form-wrapper">
+                <h3>Get in Touch</h3>
+                <form class="hero-contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <select name="service">
+                            <option value="" disabled selected>Service of Interest</option>
+                            <option value="evaluation">Psychiatric Evaluation</option>
+                            <option value="medication">Medication Management</option>
+                            <option value="therapy">Psychotherapy</option>
+                            <option value="telepsychiatry">Telepsychiatry</option>
+                            <option value="couples">Couples Counseling</option>
+                            <option value="group">Group Therapy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Brief message (optional)" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/dc-vance-headshot.jpg" alt="Dr. Elena Vance">
+                </div>
+                <div class="about-text">
+                    <h2>Meet Dr. Vance</h2>
+                    <p>With over 15 years of experience in clinical psychiatry, I am dedicated to helping individuals navigate life's challenges. My approach combines modern medical science with compassionate psychotherapy to treat the whole person, not just the symptoms.</p>
+                    <p>I specialize in treating anxiety disorders, depression, and adult ADHD. I believe in a collaborative relationship where we work together to find the best path forward for your mental wellness.</p>
+                    <p><strong>Credentials:</strong><br>
+                    MD, Johns Hopkins University School of Medicine<br>
+                    Board Certified, American Board of Psychiatry and Neurology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Clinical Services</h2>
+                <p>Comprehensive care designed to support your mental health needs.</p>
+                <p style="max-width: 800px; margin: 20px auto 0; font-size: 1.05rem; opacity: 0.9;">Therapy provides a safe, supportive environment to explore your thoughts and feelings. It is a proactive step towards building resilience, managing stress, and understanding yourself better. Professional guidance can help you navigate life's challenges with greater clarity and confidence.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/psychiartric-evaluation-service.webp" alt="Calm and professional office for psychiatric evaluation" class="service-image">
+                    <div class="service-card-content">
+                        <h3>Psychiatric Evaluation</h3>
+                        <p>Comprehensive diagnostic assessments to understand your history, symptoms, and goals for treatment.</p>
+                        <div class="service-card-links">
+                            <a href="contact.html" class="btn-card">Book Now</a>
+                            <a href="services.html#evaluation" class="btn-card-info">More Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/medication-management-service.jpg" alt="Abstract image representing health and science for medication management" class="service-image">
+                    <div class="service-card-content">
+                        <h3>Medication Management</h3>
+                        <p>Careful and conservative prescription monitoring to ensure effectiveness and minimize side effects.</p>
+                        <div class="service-card-links">
+                            <a href="contact.html" class="btn-card">Book Now</a>
+                            <a href="services.html#medication" class="btn-card-info">More Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/pyschotheorapy-service.webp" alt="Serene room setting for psychotherapy" class="service-image">
+                    <div class="service-card-content">
+                        <h3>Psychotherapy</h3>
+                        <p>Individual talk therapy sessions utilizing CBT and mindfulness techniques to build coping strategies.</p>
+                        <div class="service-card-links">
+                            <a href="contact.html" class="btn-card">Book Now</a>
+                            <a href="services.html#psychotherapy" class="btn-card-info">More Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/telepsychiatry-service.webp" alt="A person having a secure telepsychiatry session on a laptop" class="service-image">
+                    <div class="service-card-content">
+                        <h3>Telepsychiatry</h3>
+                        <p>Secure, HIPAA-compliant video appointments available for patients residing within the state.</p>
+                        <div class="service-card-links">
+                            <a href="contact.html" class="btn-card">Book Now</a>
+                            <a href="services.html#telepsychiatry" class="btn-card-info">More Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/couples-councilling-service.webp" alt="Two people's hands clasked, symbolizing connection in couples counseling" class="service-image">
+                    <div class="service-card-content">
+                        <h3>Couples Counseling</h3>
+                        <p>Strengthening relationships through guided communication and conflict resolution strategies.</p>
+                        <div class="service-card-links">
+                            <a href="contact.html" class="btn-card">Book Now</a>
+                            <a href="services.html#couples" class="btn-card-info">More Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/group-therapy-service.webp" alt="Chairs in a circle for a group therapy session" class="service-image">
+                    <div class="service-card-content">
+                        <h3>Group Therapy</h3>
+                        <p>Supportive group sessions focused on shared experiences and collective healing.</p>
+                        <div class="service-card-links">
+                            <a href="contact.html" class="btn-card">Book Now</a>
+                            <a href="services.html#group" class="btn-card-info">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Patient Reviews</h2>
+                <p>Kind words from those we have had the privilege to help.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Dr. Vance is incredibly understanding and patient. She created a safe space where I finally felt comfortable opening up. Highly recommended."</p>
+                    <h4>- Sarah M.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"The telepsychiatry sessions have been a lifesaver for my busy schedule. Professional, punctual, and very effective treatment."</p>
+                    <h4>- James L.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"I've struggled with anxiety for years, and Dr. Vance's combination of medication management and therapy has truly changed my life."</p>
+                    <h4>- Emily R.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Dr. Elena Vance, MD</h4>
+                    <p>123 Park Avenue,<br>London, UK</p>
+                    <p>Phone: 0800 XXX XXX</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Mon - Thu: 9am - 5pm<br>Fri: 9am - 2pm</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="book.html">Book Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <p>In case of a medical emergency, please dial 999 or visit your nearest emergency room.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340002653!2d-0.24168120642536509!3d51.52855824164916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="150" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Dr. Elena Vance, MD. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
